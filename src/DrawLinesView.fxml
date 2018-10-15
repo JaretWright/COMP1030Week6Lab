@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DrawLinesViewController">
+    <children>
+        <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="600.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <FlowPane columnHalignment="CENTER" hgap="10.0">
+                    <children>
+                        <Button minHeight="110.0" minWidth="110.0" mnemonicParsing="false" onAction="#drawXButtonPressed" text="Draw X">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Button>
+                        <Button minHeight="110.0" minWidth="110.0" mnemonicParsing="false" onAction="#drawLPatternButtonPressed" prefWidth="100.0">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fx:id="lPatternImageView" fitHeight="100.0" fitWidth="100.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" />
+                            </graphic>
+                        </Button>
+                        <Button minHeight="110.0" minWidth="110.0" mnemonicParsing="false" onAction="#footballPatternButtonPressed" prefWidth="100.0">
+                            <graphic>
+                                <ImageView fx:id="footballPatternImageView" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                            </graphic></Button>
+                        <Button minHeight="110.0" minWidth="110.0" mnemonicParsing="false" onAction="#threeQuartersPatternButtonPressed" prefWidth="100.0">
+                            <graphic>
+                                <ImageView fx:id="threeQuartersImageView" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                            </graphic>
+                        </Button>
+                        <Button minHeight="110.0" minWidth="110.0" mnemonicParsing="false" onAction="#fullPatternButtonPressed" prefWidth="100.0">
+                            <graphic>
+                                <ImageView fx:id="fullImageView" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                            </graphic>
+                        </Button>
+                    </children>
+                </FlowPane>
+                <Canvas fx:id="canvas" height="300.0" width="300.0" />
+                <Label text="This uses the examples from Chapter 4 in the text book">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>
